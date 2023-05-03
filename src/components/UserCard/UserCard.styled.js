@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Background from '../../images/background.png';
 
 export const Container = styled.div`
   position: relative;
@@ -6,22 +7,16 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 380px;
+  height: 460px;
   border-radius: 20px;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
 
-  background-image: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
+  background-image: url(${Background}),
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  background-position: left 50% top 28px, left 0 top 0;
+  background-repeat: no-repeat;
 `;
 
-export const BackgroundImg = styled.img`
-  width: 308px;
-  height: 168px;
-  margin-top: 28px;
-`;
 export const LogoImg = styled.img`
   position: absolute;
   top: 20px;
@@ -32,7 +27,7 @@ export const LogoImg = styled.img`
 
 export const Ellipse = styled.div`
   position: relative;
-  margin-top: -18px;
+  margin-top: 178px;
   width: 80px;
   height: 80px;
 

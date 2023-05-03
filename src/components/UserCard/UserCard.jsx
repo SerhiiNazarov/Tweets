@@ -1,6 +1,5 @@
 import {
   Container,
-  BackgroundImg,
   LogoImg,
   Ellipse,
   Avatar,
@@ -8,11 +7,11 @@ import {
   Follow,
   Btn,
   Numbers,
-} from "./UserCard.styled";
-import Logo from "../../images/Logo.png";
-import Background from "../../images/background.png";
-import Boy from "../../images//Boy.png";
-import useLocalStorage from "../../helpers/useLocalStorage";
+} from './UserCard.styled';
+import Logo from '../../images/Logo.png';
+
+import Boy from '../../images//Boy.png';
+import useLocalStorage from '../../helpers/useLocalStorage';
 
 function UserCard({ user: { user, avatar, followers, tweets } }) {
   const [isFollow, setIsFollow] = useLocalStorage(`${user}isFollow`, true);
@@ -20,25 +19,24 @@ function UserCard({ user: { user, avatar, followers, tweets } }) {
     `${user}userFollowers`,
     followers
   );
-  const [bgBtn, setBgBtn] = useLocalStorage(`${user}bgBtn`, "#EBD8FF");
+  const [bgBtn, setBgBtn] = useLocalStorage(`${user}bgBtn`, '#EBD8FF');
 
   const onClick = () => {
-    setIsFollow((isFollow) => !isFollow);
+    setIsFollow(isFollow => !isFollow);
 
     if (isFollow) {
       setUserFollowers(Number(userFollowers + 1));
-      setBgBtn("#5CD3A8");
+      setBgBtn('#5CD3A8');
       return;
     }
 
     setUserFollowers(Number(userFollowers - 1));
-    setBgBtn("#EBD8FF");
+    setBgBtn('#EBD8FF');
   };
 
   return (
     <Container>
       <LogoImg src={Logo} />
-      <BackgroundImg src={Background} />
       <Ellipse>
         <Avatar src={avatar ? avatar : Boy} />
       </Ellipse>
@@ -46,14 +44,14 @@ function UserCard({ user: { user, avatar, followers, tweets } }) {
         <Numbers>{tweets}</Numbers> Tweets
       </Tweets>
       <Follow>
-        <Numbers>{userFollowers.toLocaleString("en-US")}</Numbers> Followers
+        <Numbers>{userFollowers.toLocaleString('en-US')}</Numbers> Followers
       </Follow>
       <Btn
         type="button"
         onClick={onClick}
         style={{ backgroundColor: `${bgBtn}` }}
       >
-        {isFollow ? "Follow" : "Following"}
+        {isFollow ? 'Follow' : 'Following'}
       </Btn>
     </Container>
   );
