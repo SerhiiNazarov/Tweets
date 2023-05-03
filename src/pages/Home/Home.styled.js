@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 1000px;
-  height: 700px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Btn = styled.button`
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -43,20 +43,21 @@ export const Btn = styled.button`
 
 export const BackgroundImg = styled.img`
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
+  width: 698px;
 `;
 
 export const Text = styled.p`
   margin-top: 26px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
   color: #ebd8ff;
-  margin-bottom: 500px;
+  margin-bottom: 400px;
 `;

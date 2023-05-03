@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
@@ -43,7 +43,7 @@ export const Ellipse = styled.div`
   border-radius: 50%;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: -150px;
@@ -58,7 +58,7 @@ export const Ellipse = styled.div`
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     right: -150px;
@@ -86,7 +86,7 @@ export const Avatar = styled.img`
 
 export const Tweets = styled.p`
   margin-top: 26px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -97,7 +97,7 @@ export const Tweets = styled.p`
 
 export const Follow = styled.p`
   margin-top: 16px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -107,7 +107,7 @@ export const Follow = styled.p`
 `;
 
 export const Btn = styled.button`
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -129,7 +129,7 @@ export const Btn = styled.button`
 `;
 
 export const Numbers = styled.span`
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
