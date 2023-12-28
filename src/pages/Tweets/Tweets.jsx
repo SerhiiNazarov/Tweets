@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import UsesList from "../../components/UsersList/UsersList";
-import { Btn, LinkTo, FilterWrapper, Select } from "./Tweets.styled";
+import UsersList from '../../components/UsersList/UsersList';
+import { Btn, LinkTo, FilterWrapper, Select } from './Tweets.styled';
 
-import getAllUsers from "../../services/usersData";
-import useLocalStorage from "../../helpers/useLocalStorage";
+import getAllUsers from '../../services/usersData';
+import useLocalStorage from '../../helpers/useLocalStorage';
 
 const Tweets = () => {
   const [users, setUsers] = useState([]);
   const [filterValue, setFilterValue] = useLocalStorage(
-    "filterValue",
-    "show all"
+    'filterValue',
+    'show all'
   );
 
-  const onHandleChange = (event) => {
+  const onHandleChange = event => {
     setFilterValue(event.target.value);
   };
 
   useEffect(() => {
     try {
-      getAllUsers().then((response) => {
+      getAllUsers().then(response => {
         setUsers(response);
       });
     } catch (error) {
@@ -44,7 +44,7 @@ const Tweets = () => {
         <Btn>Back</Btn>
       </LinkTo>
 
-      <UsesList users={users} changeFilter={filterValue} />
+      <UsersList users={users} changeFilter={filterValue} />
     </>
   );
 };

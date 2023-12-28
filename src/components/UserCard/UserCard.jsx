@@ -17,10 +17,10 @@ function UserCard({ user: { user, avatar, followers, tweets } }) {
   const [isFollow, setIsFollow] = useLocalStorage(`${user}isFollow`, true);
   const [userFollowers, setUserFollowers] = useLocalStorage(
     `${user}userFollowers`,
-    followers
+    `${followers}`
   );
-  const [bgBtn, setBgBtn] = useLocalStorage(`${user}bgBtn`, '#EBD8FF');
 
+  const [bgBtn, setBgBtn] = useLocalStorage(`${user}bgBtn`, '#EBD8FF');
   const onClick = () => {
     setIsFollow(isFollow => !isFollow);
 
@@ -44,7 +44,8 @@ function UserCard({ user: { user, avatar, followers, tweets } }) {
         <Numbers>{tweets}</Numbers> Tweets
       </Tweets>
       <Follow>
-        <Numbers>{userFollowers.toLocaleString('en-US')}</Numbers> Followers
+        <Numbers>{Number(userFollowers).toLocaleString('en-US')}</Numbers>{' '}
+        Followers
       </Follow>
       <Btn
         type="button"

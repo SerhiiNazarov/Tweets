@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import UserCard from "../UserCard/UserCard";
-import Container from "../Container/Container";
+import React, { useState, useEffect } from 'react';
+import UserCard from '../UserCard/UserCard';
+import Container from '../Container/Container';
 
-import { Btn, Wrapper } from "./UserList.styled";
+import { Btn, Wrapper } from './UserList.styled';
 
 function UsersList({ users, changeFilter }) {
   const [nextPage, setNextPage] = useState(3);
@@ -13,17 +13,17 @@ function UsersList({ users, changeFilter }) {
   };
 
   useEffect(() => {
-    const filterByOptions = users.filter((user) => {
+    const filterByOptions = users.filter(user => {
       switch (changeFilter) {
-        case "show all":
+        case 'show all':
           return true;
-        case "follow":
+        case 'follow':
           return (
-            JSON.parse(localStorage.getItem(`${user.user}bgBtn`)) !== "#5CD3A8"
+            JSON.parse(localStorage.getItem(`${user.user}bgBtn`)) !== '#5CD3A8'
           );
-        case "followings":
+        case 'followings':
           return (
-            JSON.parse(localStorage.getItem(`${user.user}bgBtn`)) === "#5CD3A8"
+            JSON.parse(localStorage.getItem(`${user.user}bgBtn`)) === '#5CD3A8'
           );
 
         default:
@@ -37,8 +37,8 @@ function UsersList({ users, changeFilter }) {
   return (
     <Wrapper>
       <Container>
-        {filteredUsers.slice(0, nextPage).map(({ id, ...props }) => {
-          return <UserCard key={id} user={props}></UserCard>;
+        {filteredUsers.slice(0, nextPage).map(({ _id, ...props }) => {
+          return <UserCard key={_id} user={props}></UserCard>;
         })}
       </Container>
       {nextPage < users.length && filteredUsers.length !== 0 && (
@@ -47,7 +47,7 @@ function UsersList({ users, changeFilter }) {
         </Btn>
       )}
       {filteredUsers.length === 0 && (
-        <p style={{ color: "white", fontSize: "20px" }}>No users</p>
+        <p style={{ color: 'white', fontSize: '20px' }}>No users</p>
       )}
     </Wrapper>
   );
