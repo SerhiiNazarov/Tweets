@@ -1,0 +1,21 @@
+[
+  {
+    "user": "Lena",
+    "avatar": "https://robohash.org/8be26d561e568f064e2694401739ca51?set=set4&bgset=bg1&size=400x400",
+    "tweets": "500427",
+    "followers": "666"
+  },
+
+  {
+    "user": "Voba",
+    "avatar": "https://robohash.org/bc8cab4ba5c5d2d99b4f07e171bda77f?set=set2&bgset=bg1&size=400x400",
+    "tweets": "530427",
+    "followers": "667"
+  },
+  {
+    "user": "Hary",
+    "avatar": "https://robohash.org/3f863d2e62b3bd8453de3d49b2b8b2fe?set=set2&bgset=bg1&size=400x400",
+    "tweets": "582427",
+    "followers": "877"
+  }
+]
